@@ -14,6 +14,9 @@ tags: [Machine Learning, Explainability, SHAP, Random Forest]
 summary: "An exploration of feature importance, using the California housing dataset to illustrate its role in interpretability and responsible AI."
 ---
 
+# Abstract
+Feature importance is a critical tool for making machine learning models interpretable and actionable. This blog explores the concept through a case study using the California Housing dataset, demonstrating techniques like Random Forest feature importance and SHAP values. With clear visualizations, including heatmaps, bar charts, and SHAP plots, this blog provides practical insights for understanding the drivers behind predictions and building trust in machine learning systems.
+
 ![](ai.jpg)
 
 # Introduction

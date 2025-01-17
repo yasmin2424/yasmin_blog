@@ -120,18 +120,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#why-does-feature-importance-matter" id="toc-why-does-feature-importance-matter" class="nav-link" data-scroll-target="#why-does-feature-importance-matter"><span class="header-section-number">2</span> Why Does Feature Importance Matter?</a></li>
-  <li><a href="#a-case-study-the-california-housing-dataset" id="toc-a-case-study-the-california-housing-dataset" class="nav-link" data-scroll-target="#a-case-study-the-california-housing-dataset"><span class="header-section-number">3</span> A Case Study: The California Housing Dataset</a>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract"><span class="header-section-number">1</span> Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#why-does-feature-importance-matter" id="toc-why-does-feature-importance-matter" class="nav-link" data-scroll-target="#why-does-feature-importance-matter"><span class="header-section-number">3</span> Why Does Feature Importance Matter?</a></li>
+  <li><a href="#a-case-study-the-california-housing-dataset" id="toc-a-case-study-the-california-housing-dataset" class="nav-link" data-scroll-target="#a-case-study-the-california-housing-dataset"><span class="header-section-number">4</span> A Case Study: The California Housing Dataset</a>
   <ul class="collapse">
-  <li><a href="#correlation-heatmap" id="toc-correlation-heatmap" class="nav-link" data-scroll-target="#correlation-heatmap"><span class="header-section-number">3.1</span> 1. Correlation Heatmap</a></li>
-  <li><a href="#feature-importance-with-random-forest" id="toc-feature-importance-with-random-forest" class="nav-link" data-scroll-target="#feature-importance-with-random-forest"><span class="header-section-number">3.2</span> 2. Feature Importance with Random Forest</a></li>
-  <li><a href="#shap-a-deeper-dive-into-explainability" id="toc-shap-a-deeper-dive-into-explainability" class="nav-link" data-scroll-target="#shap-a-deeper-dive-into-explainability"><span class="header-section-number">3.3</span> 3. SHAP: A Deeper Dive Into Explainability</a></li>
+  <li><a href="#correlation-heatmap" id="toc-correlation-heatmap" class="nav-link" data-scroll-target="#correlation-heatmap"><span class="header-section-number">4.1</span> 1. Correlation Heatmap</a></li>
+  <li><a href="#feature-importance-with-random-forest" id="toc-feature-importance-with-random-forest" class="nav-link" data-scroll-target="#feature-importance-with-random-forest"><span class="header-section-number">4.2</span> 2. Feature Importance with Random Forest</a></li>
+  <li><a href="#shap-a-deeper-dive-into-explainability" id="toc-shap-a-deeper-dive-into-explainability" class="nav-link" data-scroll-target="#shap-a-deeper-dive-into-explainability"><span class="header-section-number">4.3</span> 3. SHAP: A Deeper Dive Into Explainability</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">4</span> Key Takeaways</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">5</span> Key Takeaways</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">6</span> Conclusion</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5.0.1</span> References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6.0.1</span> References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -176,9 +177,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="abstract" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Abstract</h1>
+<p>Feature importance is a critical tool for making machine learning models interpretable and actionable. This blog explores the concept through a case study using the California Housing dataset, demonstrating techniques like Random Forest feature importance and SHAP values. With clear visualizations, including heatmaps, bar charts, and SHAP plots, this blog provides practical insights for understanding the drivers behind predictions and building trust in machine learning systems.</p>
 <p><img src="ai.jpg" class="img-fluid"></p>
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+</section>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
 <p>In the fast-evolving field of machine learning, understanding how models make predictions is just as important as achieving high accuracy. This is where feature importance becomes a critical tool. Feature importance answers questions like:</p>
 <ul>
 <li>Which features contribute most to a model’s predictions?</li>
@@ -188,8 +193,8 @@ ul.task-list li input[type="checkbox"] {
 <p>As a machine learning enthusiast, I vividly remember the class where we explored feature importance. It was an eye-opening session that demonstrated how interpretability can enhance the trustworthiness and effectiveness of machine learning systems. This blog dives into the concept of feature importance, illustrating its application with the California housing dataset.</p>
 <hr>
 </section>
-<section id="why-does-feature-importance-matter" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Why Does Feature Importance Matter?</h1>
+<section id="why-does-feature-importance-matter" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Why Does Feature Importance Matter?</h1>
 <p>Feature importance isn’t just a technical metric; it’s a cornerstone of responsible AI development. Here’s why it matters:</p>
 <ol type="1">
 <li><strong>Trust and Transparency</strong>: Explaining model predictions builds trust with stakeholders and users.</li>
@@ -200,12 +205,12 @@ ul.task-list li input[type="checkbox"] {
 <p>These benefits make it a must-have tool for machine learning practitioners and engineers.</p>
 <hr>
 </section>
-<section id="a-case-study-the-california-housing-dataset" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> A Case Study: The California Housing Dataset</h1>
+<section id="a-case-study-the-california-housing-dataset" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> A Case Study: The California Housing Dataset</h1>
 <p>To demonstrate feature importance in action, I analyzed the California housing dataset. This dataset predicts housing prices (<code>MedInc</code>) based on features like population, house age, and geographic data.</p>
 <p>Let’s walk through the steps.</p>
-<section id="correlation-heatmap" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="correlation-heatmap"><span class="header-section-number">3.1</span> 1. Correlation Heatmap</h2>
+<section id="correlation-heatmap" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="correlation-heatmap"><span class="header-section-number">4.1</span> 1. Correlation Heatmap</h2>
 <p>Before diving into feature importance, I visualized the feature correlations to understand relationships in the data. The heatmap below reveals some interesting patterns:</p>
 <ul>
 <li><code>AveRooms</code> and <code>AveBedrms</code> are strongly correlated (<code>r = 0.85</code>), indicating potential redundancy.</li>
@@ -220,8 +225,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Understanding these correlations is crucial, as it helps identify multicollinearity, which can influence model interpretation.</p>
 <hr>
 </section>
-<section id="feature-importance-with-random-forest" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="feature-importance-with-random-forest"><span class="header-section-number">3.2</span> 2. Feature Importance with Random Forest</h2>
+<section id="feature-importance-with-random-forest" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="feature-importance-with-random-forest"><span class="header-section-number">4.2</span> 2. Feature Importance with Random Forest</h2>
 <p>Next, I trained a Random Forest model and computed feature importance scores. Random Forest is a versatile algorithm that naturally provides feature importance based on tree splits. The bar chart below highlights the most influential features:</p>
 <ul>
 <li><code>MedInc</code> (Median Income) dominates as the most important feature, which makes sense since income levels often correlate strongly with housing prices.</li>
@@ -236,8 +241,8 @@ ul.task-list li input[type="checkbox"] {
 <p>This global view of feature importance provides a solid understanding of which features matter most to the model.</p>
 <hr>
 </section>
-<section id="shap-a-deeper-dive-into-explainability" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="shap-a-deeper-dive-into-explainability"><span class="header-section-number">3.3</span> 3. SHAP: A Deeper Dive Into Explainability</h2>
+<section id="shap-a-deeper-dive-into-explainability" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="shap-a-deeper-dive-into-explainability"><span class="header-section-number">4.3</span> 3. SHAP: A Deeper Dive Into Explainability</h2>
 <p>SHAP (SHapley Additive exPlanations) takes feature importance a step further by quantifying each feature’s contribution to individual predictions. This local interpretability is invaluable for understanding edge cases.</p>
 <p>The SHAP summary plot below illustrates:</p>
 <ul>
@@ -272,8 +277,8 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
-<section id="key-takeaways" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Key Takeaways</h1>
+<section id="key-takeaways" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Key Takeaways</h1>
 <p>Reflecting on this analysis, here are the lessons I’ve learned about feature importance:</p>
 <ol type="1">
 <li><strong>Understand Your Data</strong>: Tools like correlation heatmaps provide valuable insights early in the process.</li>
@@ -283,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
 <p>For machine learning engineers, feature importance isn’t just an optional tool but it’s an essential practice that bridges the gap between model performance and real-world applicability.</p>
 <hr>
 </section>
-<section id="conclusion" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
+<section id="conclusion" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Conclusion</h1>
 <p>Feature importance serves as a guiding light in the world of machine learning. Whether you’re building models to predict housing prices, detect fraud, or recommend products, understanding which features drive your model’s decisions is crucial. As I’ve learned from this analysis, interpretability is not a compromise but it’s a necessity for building responsible and effective AI systems.</p>
 <p>What are your thoughts on feature importance? Have you used it in your projects? Let’s discuss in the comments!</p>
 <hr>
-<section id="references" class="level3" data-number="5.0.1">
-<h3 data-number="5.0.1" class="anchored" data-anchor-id="references"><span class="header-section-number">5.0.1</span> References</h3>
+<section id="references" class="level3" data-number="6.0.1">
+<h3 data-number="6.0.1" class="anchored" data-anchor-id="references"><span class="header-section-number">6.0.1</span> References</h3>
 <ul>
 <li><p>Lundberg, S. M., &amp; Lee, S.-I. (2017). A unified approach to interpreting model predictions. <em>Advances in Neural Information Processing Systems</em>.<a href="https://proceedings.neurips.cc/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf" class="uri">https://proceedings.neurips.cc/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf</a></p></li>
 <li><p>shap documentation: <a href="https://shap.readthedocs.io/en/latest/" class="uri">https://shap.readthedocs.io/en/latest/</a></p></li>
