@@ -21,13 +21,6 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Understanding Feature Importance in Machine Learning",
-    "section": "",
-    "text": "In the fast-evolving field of machine learning, understanding how models make predictions is just as important as achieving high accuracy. This is where feature importance becomes a critical tool. Feature importance answers questions like:\n\nWhich features contribute most to a model’s predictions?\nHow can we ensure our models are interpretable and fair?\nWhat insights can we extract about the data itself?\n\nAs a machine learning enthusiast, I vividly remember the class where we explored feature importance. It was an eye-opening session that demonstrated how interpretability can enhance the trustworthiness and effectiveness of machine learning systems. This blog dives into the concept of feature importance, illustrating its application with the California housing dataset."
-  },
-  {
     "objectID": "index.html#correlation-heatmap",
     "href": "index.html#correlation-heatmap",
     "title": "Understanding Feature Importance in Machine Learning",

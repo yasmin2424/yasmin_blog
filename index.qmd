@@ -14,6 +14,8 @@ tags: [Machine Learning, Explainability, SHAP, Random Forest]
 summary: "An exploration of feature importance, using the California housing dataset to illustrate its role in interpretability and responsible AI."
 ---
 
+![](ai.jpg)
+
 # Introduction
 
 In the fast-evolving field of machine learning, understanding how models make predictions is just as important as achieving high accuracy. This is where feature importance becomes a critical tool. Feature importance answers questions like:
