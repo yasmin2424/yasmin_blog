@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Understanding Feature Importance in Machine Learning",
+    "section": "",
+    "text": "Feature importance is a critical tool for making machine learning models interpretable and actionable. This blog explores the concept through a case study using the California Housing dataset, demonstrating techniques like Random Forest feature importance and SHAP values. With clear visualizations, including heatmaps, bar charts, and SHAP plots, this blog provides practical insights for understanding the drivers behind predictions and building trust in machine learning systems."
+  },
+  {
+    "objectID": "index.html#correlation-heatmap",
+    "href": "index.html#correlation-heatmap",
+    "title": "Understanding Feature Importance in Machine Learning",
+    "section": "4.1 1. Correlation Heatmap",
+    "text": "4.1 1. Correlation Heatmap\nBefore diving into feature importance, I visualized the feature correlations to understand relationships in the data. The heatmap below reveals some interesting patterns:\n\nAveRooms and AveBedrms are strongly correlated (r = 0.85), indicating potential redundancy.\nGeographic features like Latitude and Longitude are also highly related, which is expected given the dataset’s regional nature.\n\n\n\n\nFeature Correlation Heatmap\n\n\nUnderstanding these correlations is crucial, as it helps identify multicollinearity, which can influence model interpretation."
+  },
+  {
+    "objectID": "index.html#feature-importance-with-random-forest",
+    "href": "index.html#feature-importance-with-random-forest",
+    "title": "Understanding Feature Importance in Machine Learning",
+    "section": "4.2 2. Feature Importance with Random Forest",
+    "text": "4.2 2. Feature Importance with Random Forest\nNext, I trained a Random Forest model and computed feature importance scores. Random Forest is a versatile algorithm that naturally provides feature importance based on tree splits. The bar chart below highlights the most influential features:\n\nMedInc (Median Income) dominates as the most important feature, which makes sense since income levels often correlate strongly with housing prices.\nAveOccup (average occupants per household) and Latitude also show significant influence.\n\n\n\n\nRandom Forest Feature Importance plot highlighting MedInc as the most influential feature, followed by AveOccup and Latitude.\n\n\nThis global view of feature importance provides a solid understanding of which features matter most to the model."
+  },
+  {
+    "objectID": "index.html#shap-a-deeper-dive-into-explainability",
+    "href": "index.html#shap-a-deeper-dive-into-explainability",
+    "title": "Understanding Feature Importance in Machine Learning",
+    "section": "4.3 3. SHAP: A Deeper Dive Into Explainability",
+    "text": "4.3 3. SHAP: A Deeper Dive Into Explainability\nSHAP (SHapley Additive exPlanations) takes feature importance a step further by quantifying each feature’s contribution to individual predictions. This local interpretability is invaluable for understanding edge cases.\nThe SHAP summary plot below illustrates:\n\nHigh MedInc values positively influence predictions, significantly increasing housing prices.\nFeatures like Latitude and AveOccup also play key roles but show varying impacts depending on their values.\n\n\n\n\nSHAP Summary Plot showing the impact of features on housing price predictions. Higher MedInc values positively influence predictions, while Latitude and AveOccup have varying effects depending on their values.\n\n\nSHAP allows us to zoom into individual predictions, making it an excellent tool for debugging and fairness analysis.\nSHAP Dependence Plot\nTo understand feature interactions, I plotted a SHAP dependence plot below which highlights how MedInc strongly influences predictions. The SHAP values for MedInc increase with its value, showing its positive impact on housing price predictions. The color gradient represents AveOccup, revealing an additional interaction where higher AveOccup values slightly modulate the effect of MedInc.\n\n\n\nSHAP Dependence Plot showing the interaction between Median Income (MedInc) and Latitude. MedInc positively impacts predictions, with AveOccup slightly modulating its effect.\n\n\nSHAP Waterfall Plot\nFinally, I used a SHAP waterfall plot to break down the prediction for a single data point. This plot shows how each feature’s SHAP value contributes to the final prediction:\nMedInc contributes the most, followed by smaller contributions from Latitude and AveOccup.\nThe plot provides a cumulative view of feature effects, offering a detailed explanation of the model’s decision\n\n\n\nSHAP Waterfall Plot illustrating how individual feature contributions (like MedInc and Latitude) combine to predict housing prices for a single instance(this case first datapoint)."
+  }
+]
